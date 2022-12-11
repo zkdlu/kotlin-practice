@@ -8,6 +8,16 @@ fun main() {
 
     val person = Person("안녕")
     println("이름은 ${person.name}")
+
+    val str = """
+        ABCD
+        EFG
+        asdfasdlkfjskdjf;akj
+        123124
+    """.trimIndent()
+
+    println(str)
+    println(str[1])
 }
 
 fun printNameIfPerson2(obj: Any?) {
