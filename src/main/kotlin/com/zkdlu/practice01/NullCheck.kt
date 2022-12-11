@@ -8,7 +8,7 @@ fun main() {
     val str2: String? = "ABC"
     println(str2?.length)
 
-    val str3: String? = "ABC"
+    val str3: String? = null
     println(str3?.length ?: 0)
 }
 
