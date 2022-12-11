@@ -18,4 +18,8 @@ fun main() {
 
     if (money1 === money4)
         println("동일")
+
+    val m1 = Money(100)
+    val m2 = Money(200)
+    println((m1 + m2).amount)
 }
