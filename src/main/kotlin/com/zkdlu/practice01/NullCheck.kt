@@ -7,6 +7,9 @@ fun main() {
 
     val str2: String? = "ABC"
     println(str2?.length)
+
+    val str3: String? = "ABC"
+    println(str3?.length ?: 0)
 }
 
 fun startsWithA1(str: String?): Boolean {
