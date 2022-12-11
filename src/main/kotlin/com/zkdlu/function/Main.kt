@@ -9,9 +9,13 @@ fun main() {
     repeat("Hello", 5, false)
 
     repeat("Hello", useNewLine = false)
+
+    printAll("A", "B", "C")
+    val array = arrayOf("A", "B", "C")
+    printAll(*array)
 }
 
-fun max(a: Int, b: Int): Int =  if (a > b) a else b
+fun max(a: Int, b: Int): Int = if (a > b) a else b
 
 fun repeat(
     str: String,
@@ -24,5 +28,11 @@ fun repeat(
         } else {
             print(str)
         }
+    }
+}
+
+fun printAll(vararg strings: String) {
+    for (str in strings) {
+        println(str)
     }
 }
