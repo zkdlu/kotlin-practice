@@ -22,4 +22,31 @@ fun main() {
         println(i)
         i++
     }
+
+    numbers.map { number -> number + 1 }
+        .forEach { number -> println(number) }
+
+    run {
+        numbers.map { number -> number + 1 }
+            .forEach { number ->
+                if (number == 2L) {
+                    return@run
+                }
+
+                if (number == 3L) {
+                    return@forEach
+                }
+
+                println(number) }
+    }
+
+    abc@ for (i in 1..100) {
+        for (j in 1..100) {
+            if (j == 2) {
+                break@abc
+            }
+            println("$i $j")
+        }
+    }
+
 }
