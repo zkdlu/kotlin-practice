@@ -1,6 +1,11 @@
 package com.zkdlu.practice01;
 
 public class JavaPerson {
+
+    public static JavaPerson newBaby(String name) {
+        return new JavaPerson(name, 1);
+    }
+
     private final String name;
     private int age;
 
