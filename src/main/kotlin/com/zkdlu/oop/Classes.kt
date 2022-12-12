@@ -7,6 +7,28 @@ fun main() {
     println(dataClass)
     println(dataClass == dataClass2)
 
+//    val (name, age) = dataClass
+    val name = dataClass.component1()
+    val age = dataClass.component2()
+    println("$name $age")
+
+    val c = ComponentTest("이건", 25)
+    val (name2, age2) = c;
+    println("$name2 $age2")
+}
+
+
+class ComponentTest(
+    val name: String,
+    val age: Int
+) {
+    operator fun component1(): String {
+        return this.name
+    }
+
+    operator fun component2(): Int {
+        return this.age
+    }
 }
 
 data class PersonDto(
