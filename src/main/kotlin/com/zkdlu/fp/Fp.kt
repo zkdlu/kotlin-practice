@@ -55,8 +55,10 @@ data class Fruit(
         get() = factoryPrice == currentPrice
 }
 
+typealias FruitFilter = (Fruit) -> Boolean
+
 private fun filterFruits(
-    fruits: List<Fruit>, filter: (Fruit) -> Boolean
+    fruits: List<Fruit>, filter: FruitFilter
 ): List<Fruit> {
     return fruits.filter(filter)
 }
